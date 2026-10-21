@@ -6,10 +6,11 @@
 /* Approved panther direction */
 .site-header{max-width:none;height:104px;padding:0 max(6vw,calc((100vw - 1280px)/2));background:#031310;color:#fff;border-bottom:1px solid rgba(255,255,255,.13)}
 .site-header .brand{color:#fff;text-transform:uppercase;letter-spacing:.08em}
+.site-header>.brand{flex:0 0 auto;min-width:254px;overflow:visible}
 .site-header .brand img{width:52px;height:60px;border-radius:0;object-fit:cover}
 .site-header .brand span{max-width:150px;font-size:13px;line-height:1.15}
 .site-header .brand b{display:block;font-size:21px;letter-spacing:.02em}
-.site-header .brand .brand-lockup{width:254px;height:auto;max-height:78px;object-fit:contain;object-position:left center}
+.site-header .brand .brand-lockup{display:block;flex:none;width:254px!important;height:auto!important;max-width:none;max-height:78px;object-fit:contain!important;object-position:left center}
 .site-header nav>a{color:#dce7e3}
 .site-header .button-small{background:transparent;border:1px solid #60706b}
 .hero{isolation:isolate;position:relative;max-width:none;min-height:calc(100vh - 104px);padding:110px max(6vw,calc((100vw - 1280px)/2)) 96px;display:flex;align-items:center;color:#fff;background:#00110e url('assets/panther-hero.jpg') center right/cover no-repeat;overflow:hidden}
@@ -33,5 +34,5 @@
 .signal-strip b{color:var(--green)}
 footer .brand .brand-lockup{width:220px;height:auto;border-radius:0;object-fit:contain}
 
-@media(max-width:900px){.site-header{height:78px;padding-left:5vw;padding-right:5vw}.site-header .brand .brand-lockup{width:205px;height:auto;max-height:63px}.site-header .brand span{font-size:11px}.site-header .brand b{font-size:17px}.menu-toggle{color:#fff;border-color:#5e6b67}.site-header nav{top:77px;background:#061c18;box-shadow:0 15px 40px #0008}.hero{min-height:760px;padding-top:80px;padding-bottom:100px;background-position:63% center}.hero-shade{background:linear-gradient(90deg,rgba(0,15,13,.98) 0%,rgba(0,15,13,.88) 55%,rgba(0,15,13,.28) 100%)}.hero-copy{width:min(690px,88vw)}.hero-caption{display:none}}
-@media(max-width:600px){.site-header .brand .brand-lockup{width:180px;max-height:58px}.hero{min-height:720px;padding:68px 6vw 75px;background-position:68% center}.hero-shade{background:linear-gradient(90deg,rgba(0,15,13,.97) 0%,rgba(0,15,13,.9) 60%,rgba(0,15,13,.55) 100%),linear-gradient(0deg,rgba(0,15,13,.45),transparent)}.hero-copy{width:100%}.hero h1{font-size:47px}.hero-support{font-size:16px}.hero-actions{align-items:stretch}.hero .button{width:100%}.hero .trust-line{flex-wrap:wrap;gap:8px 10px;margin-top:35px}.signal-strip div{border-color:var(--line)}}
+@media(max-width:900px){.site-header{height:78px;padding-left:5vw;padding-right:5vw}.site-header>.brand{min-width:205px}.site-header .brand .brand-lockup{width:205px!important;height:auto!important;max-height:63px}.site-header .brand span{font-size:11px}.site-header .brand b{font-size:17px}.menu-toggle{color:#fff;border-color:#5e6b67}.site-header nav{top:77px;background:#061c18;box-shadow:0 15px 40px #0008}.hero{min-height:760px;padding-top:80px;padding-bottom:100px;background-position:63% center}.hero-shade{background:linear-gradient(90deg,rgba(0,15,13,.98) 0%,rgba(0,15,13,.88) 55%,rgba(0,15,13,.28) 100%)}.hero-copy{width:min(690px,88vw)}.hero-caption{display:none}}
+@media(max-width:600px){.site-header>.brand{min-width:180px}.site-header .brand .brand-lockup{width:180px!important;height:auto!important;max-height:58px}.hero{min-height:720px;padding:68px 6vw 75px;background-position:68% center}.hero-shade{background:linear-gradient(90deg,rgba(0,15,13,.97) 0%,rgba(0,15,13,.9) 60%,rgba(0,15,13,.55) 100%),linear-gradient(0deg,rgba(0,15,13,.45),transparent)}.hero-copy{width:100%}.hero h1{font-size:47px}.hero-support{font-size:16px}.hero-actions{align-items:stretch}.hero .button{width:100%}.hero .trust-line{flex-wrap:wrap;gap:8px 10px;margin-top:35px}.signal-strip div{border-color:var(--line)}}
