@@ -8,7 +8,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="styles.css?v=roadmap-output-1">
+  <link rel="stylesheet" href="styles.css?v=accessibility-and-footer-1">
 </head>
 <body>
   <div class="grain" aria-hidden="true"></div>
@@ -16,11 +16,10 @@
     <a class="brand" href="#top" aria-label="C3 Cyber Operations home">
       <img class="brand-lockup" src="assets/c3-approved-lockup-transparent.png" alt="C3 Cyber Operations — Clarity. Capability. Confidence.">
     </a>
-    <button class="menu-toggle" aria-expanded="false" aria-controls="nav">Menu</button>
+    <button type="button" class="menu-toggle" aria-expanded="false" aria-controls="nav" aria-label="Open navigation menu">Menu</button>
     <nav id="nav" aria-label="Primary navigation">
       <a href="#walkthrough">Platform</a>
       <a href="#csmm">CSMM</a>
-      <a href="#walkthrough">Walkthrough</a>
       <a href="#frameworks">Frameworks</a>
       <a href="#pricing">Pricing</a>
       <a href="https://portal.c3cyber.com.au">Sign in</a>
@@ -109,9 +108,9 @@
       <div class="demo-shell reveal">
         <div class="demo-nav">
           <div class="demo-brand"><img class="demo-lockup" src="assets/c3-approved-lockup-transparent.png" alt="C3 Cyber Operations"><span>CSMM walkthrough</span></div>
-          <div class="steps" aria-label="CSMM workflow stages"><button class="active" data-step="1">1 · Users</button><button data-step="2">2 · Modules</button><button data-step="targets">3 · Targets</button><button data-step="3">4 · Assess</button><button data-step="4">5 · Evidence</button><button data-step="5">6 · Results</button><button data-step="roadmap">7 · Roadmap</button><button data-step="6">8 · Actions</button><button data-step="7">9 · Improve</button></div>
+          <div class="steps" role="tablist" aria-label="CSMM workflow stages"><button type="button" class="active" role="tab" id="step-1" aria-controls="panel-1" aria-selected="true" tabindex="0" data-step="1">1 · Users</button><button type="button" role="tab" id="step-2" aria-controls="panel-2" aria-selected="false" tabindex="-1" data-step="2">2 · Modules</button><button type="button" role="tab" id="step-targets" aria-controls="panel-targets" aria-selected="false" tabindex="-1" data-step="targets">3 · Targets</button><button type="button" role="tab" id="step-3" aria-controls="panel-3" aria-selected="false" tabindex="-1" data-step="3">4 · Assess</button><button type="button" role="tab" id="step-4" aria-controls="panel-4" aria-selected="false" tabindex="-1" data-step="4">5 · Evidence</button><button type="button" role="tab" id="step-5" aria-controls="panel-5" aria-selected="false" tabindex="-1" data-step="5">6 · Results</button><button type="button" role="tab" id="step-roadmap" aria-controls="panel-roadmap" aria-selected="false" tabindex="-1" data-step="roadmap">7 · Roadmap</button><button type="button" role="tab" id="step-6" aria-controls="panel-6" aria-selected="false" tabindex="-1" data-step="6">8 · Actions</button><button type="button" role="tab" id="step-7" aria-controls="panel-7" aria-selected="false" tabindex="-1" data-step="7">9 · Improve</button></div>
         </div>
-        <div class="demo-panel active" data-panel="1">
+        <div class="demo-panel active" role="tabpanel" id="panel-1" aria-labelledby="step-1" tabindex="0" data-panel="1">
           <div class="workflow-copy"><span>Organisation Administrator</span><h3>Build the assessment team</h3><p>The Organisation Administrator adds the people who will contribute to the CSMM and confirms their role in the assessment.</p></div>
           <div class="people-list workflow-card">
             <div class="workflow-card-head"><span>Organisation users</span><b>4 active</b></div>
@@ -120,9 +119,9 @@
             <article><i>SK</i><div><strong>Sam Kelly</strong><small>Technology and protection</small></div><span class="status invited">Invited</span></article>
             <article><i>RP</i><div><strong>Riley Patel</strong><small>People and compliance</small></div><span class="status ready">Active</span></article>
           </div>
-          <button class="button demo-next" data-go="2">Assign CSMM modules →</button>
+          <button type="button" class="button demo-next" data-go="2">Assign CSMM modules →</button>
         </div>
-        <div class="demo-panel module-panel" data-panel="2">
+        <div class="demo-panel module-panel" role="tabpanel" id="panel-2" aria-labelledby="step-2" tabindex="0" data-panel="2" hidden>
           <div class="workflow-copy"><span>Module assignment</span><h3>Assign the right modules to the right people</h3><p>The Organisation Administrator allocates each CSMM category to users with the knowledge and responsibility to complete it.</p></div>
           <div class="module-list workflow-card">
             <article><span>01</span><div><strong>Governance and Risk Management</strong><small>Jamie Lee</small></div><b>Assigned</b></article>
@@ -132,9 +131,9 @@
             <article><span>05</span><div><strong>Compliance and Assurance</strong><small>Riley Patel</small></div><b>Assigned</b></article>
             <article><span>06</span><div><strong>Employee Training and Awareness</strong><small>Riley Patel</small></div><b>Assigned</b></article>
           </div>
-          <button class="button demo-next" data-go="targets">Set required maturity levels →</button>
+          <button type="button" class="button demo-next" data-go="targets">Set required maturity levels →</button>
         </div>
-        <div class="demo-panel target-panel" data-panel="targets">
+        <div class="demo-panel target-panel" role="tabpanel" id="panel-targets" aria-labelledby="step-targets" tabindex="0" data-panel="targets" hidden>
           <div class="workflow-copy"><span>Organisation Administrator</span><h3>Set the required maturity level</h3><p>The Organisation Administrator sets the required maturity level for each CSMM category based on the organisation’s risk, obligations and operating context. These targets define the position the organisation is working toward.</p></div>
           <div class="target-list workflow-card">
             <div class="workflow-card-head"><span>Required maturity by category</span><b>Targets set</b></div>
@@ -145,20 +144,20 @@
             <article><div><strong>Compliance and Assurance</strong><small>Required level</small></div><span><i>1</i><i>2</i><i class="selected">3</i><i>4</i><i>5</i></span><b>Defined</b></article>
             <article><div><strong>Employee Training and Awareness</strong><small>Required level</small></div><span><i>1</i><i>2</i><i class="selected">3</i><i>4</i><i>5</i></span><b>Defined</b></article>
           </div>
-          <button class="button demo-next" data-go="3">Begin the CSMM assessment →</button>
+          <button type="button" class="button demo-next" data-go="3">Begin the CSMM assessment →</button>
         </div>
-        <div class="demo-panel assessment-panel" data-panel="3">
+        <div class="demo-panel assessment-panel" role="tabpanel" id="panel-3" aria-labelledby="step-3" tabindex="0" data-panel="3" hidden>
           <div class="question-copy"><span>CSMM assessment question · Governance and Risk Management</span><h3>How consistently are cybersecurity responsibilities defined and understood?</h3><p>This is an example of a question within the CSMM. The assigned user selects the description that best reflects the organisation today.</p><div class="completion"><b>Module progress</b><span><i style="width:62%"></i></span><small>8 of 13 questions complete</small></div></div>
           <div class="choices">
-            <button data-score="1"><b>1</b><span><strong>Ad hoc</strong>Responsibilities are mostly informal or unclear.</span></button>
-            <button data-score="2"><b>2</b><span><strong>Developing</strong>Key roles exist but are applied inconsistently.</span></button>
-            <button class="selected" data-score="3"><b>3</b><span><strong>Defined</strong>Responsibilities are documented, communicated and generally applied.</span></button>
-            <button data-score="4"><b>4</b><span><strong>Managed</strong>Accountability is measured and regularly reviewed.</span></button>
-            <button data-score="5"><b>5</b><span><strong>Optimised</strong>Accountability continuously improves using evidence.</span></button>
+            <button type="button" data-score="1"><b>1</b><span><strong>Ad hoc</strong>Responsibilities are mostly informal or unclear.</span></button>
+            <button type="button" data-score="2"><b>2</b><span><strong>Developing</strong>Key roles exist but are applied inconsistently.</span></button>
+            <button type="button" class="selected" data-score="3"><b>3</b><span><strong>Defined</strong>Responsibilities are documented, communicated and generally applied.</span></button>
+            <button type="button" data-score="4"><b>4</b><span><strong>Managed</strong>Accountability is measured and regularly reviewed.</span></button>
+            <button type="button" data-score="5"><b>5</b><span><strong>Optimised</strong>Accountability continuously improves using evidence.</span></button>
           </div>
-          <button class="button demo-next" data-go="4">Add supporting evidence →</button>
+          <button type="button" class="button demo-next" data-go="4">Add supporting evidence →</button>
         </div>
-        <div class="demo-panel evidence-panel" data-panel="4">
+        <div class="demo-panel evidence-panel" role="tabpanel" id="panel-4" aria-labelledby="step-4" tabindex="0" data-panel="4" hidden>
           <div class="workflow-copy"><span>Evidence and assurance</span><h3>Support responses with evidence</h3><p>Users attach relevant documents and records to support their responses. The organisation can see what has been provided and where evidence is still required.</p></div>
           <div class="evidence-list workflow-card">
             <div class="upload-zone"><b>＋</b><span><strong>Upload evidence</strong><small>Policies, registers, plans and supporting records</small></span></div>
@@ -166,16 +165,16 @@
             <article><span class="file-icon">XLS</span><div><strong>Risk Register</strong><small>Governance and Risk Management</small></div><b>Attached</b></article>
             <article><span class="file-icon">DOC</span><div><strong>Incident Response Plan</strong><small>Response and Recovery</small></div><b>Review</b></article>
           </div>
-          <button class="button demo-next" data-go="5">View CSMM results →</button>
+          <button type="button" class="button demo-next" data-go="5">View CSMM results →</button>
         </div>
-        <div class="demo-panel result-panel" data-panel="5">
-          <div class="result-summary"><span>Illustrative overall score</span><strong id="demo-score">2.8</strong><small>Developing capability</small></div>
+        <div class="demo-panel result-panel" role="tabpanel" id="panel-5" aria-labelledby="step-5" tabindex="0" data-panel="5" hidden>
+          <div class="result-summary"><span>Illustrative overall score</span><strong id="demo-score" aria-live="polite">2.8</strong><small>Developing capability</small></div>
           <div class="radar-wrap"><svg class="radar" viewBox="0 0 300 300" role="img" aria-label="Six-domain maturity visualization"><g class="grid"></g><polygon class="target" points="150,36 249,93 249,207 150,264 51,207 51,93"></polygon><polygon class="actual" points="150,66 224,107 216,188 150,221 81,190 72,105"></polygon><g class="labels"><text x="150" y="22">Govern</text><text x="265" y="91">Protect</text><text x="264" y="222">Detect</text><text x="150" y="288">Respond</text><text x="4" y="222">Assure</text><text x="8" y="91">People</text></g></svg></div>
           <div class="result-legend"><span><i class="actual-dot"></i>Current</span><span><i class="target-dot"></i>Target</span></div>
           <div class="result-context"><b>Results show current and target maturity across all six CSMM categories.</b><p>Gaps help the organisation identify where action will have the greatest value.</p></div>
-          <button class="button demo-next" data-go="roadmap">Build the maturity roadmap →</button>
+          <button type="button" class="button demo-next" data-go="roadmap">Build the maturity roadmap →</button>
         </div>
-        <div class="demo-panel roadmap-panel" data-panel="roadmap">
+        <div class="demo-panel roadmap-panel" role="tabpanel" id="panel-roadmap" aria-labelledby="step-roadmap" tabindex="0" data-panel="roadmap" hidden>
           <div class="roadmap-heading"><div><span>Prioritised maturity roadmap</span><h3>Translate gaps into a guided change program</h3></div><p>The roadmap provides practical guidance on the changes to make, then sequences the work required to move each CSMM category toward the maturity level chosen by the Organisation Administrator.</p></div>
           <div class="roadmap-status"><div><span>Current maturity</span><strong>2.8</strong></div><i>→</i><div><span>Chosen target</span><strong>4.0</strong></div><b>6 priority changes</b></div>
           <div class="roadmap-track">
@@ -184,9 +183,9 @@
             <article><header><span>LATER</span><small>6–12 months</small></header><div><b>Measure control effectiveness</b><small>Protective Measures · Level 3 → 4</small></div><div><b>Integrate risk into planning</b><small>Governance and Risk · Level 3 → 4</small></div></article>
           </div>
           <p class="roadmap-note"><b>Clear guidance on what needs to change</b><span>Each recommendation can be converted into an owned, prioritised and measurable action.</span></p>
-          <button class="button demo-next" data-go="6">Assign roadmap actions →</button>
+          <button type="button" class="button demo-next" data-go="6">Assign roadmap actions →</button>
         </div>
-        <div class="demo-panel action-panel" data-panel="6">
+        <div class="demo-panel action-panel" role="tabpanel" id="panel-6" aria-labelledby="step-6" tabindex="0" data-panel="6" hidden>
           <div class="action-heading"><div><span>Improvement plan</span><h3>Assigned actions</h3></div><p>Track ownership, delivery and progress against the maturity gaps identified by the CSMM.</p></div>
           <div class="action-summary"><div><strong>3</strong><span>Open actions</span></div><div><strong>2</strong><span>On track</span></div><div><strong>1</strong><span>Review due</span></div></div>
           <div class="action-grid">
@@ -194,9 +193,9 @@
             <article class="action-card"><header><span>Priority 02</span><b class="action-status review">Review due</b></header><h3>Exercise incident responsibilities</h3><p>Validate decision rights and responsibilities through a tabletop exercise.</p><div class="action-meta"><span><small>Owner</small><b>Alex Morgan</b></span><span><small>Due</small><b>15 Dec</b></span></div><div class="action-progress"><span><i style="width:46%"></i></span><b>46%</b></div></article>
             <article class="action-card"><header><span>Priority 03</span><b class="action-status on-track">On track</b></header><h3>Formalise assurance reporting</h3><p>Create an evidence based view for executives and the board.</p><div class="action-meta"><span><small>Owner</small><b>Riley Patel</b></span><span><small>Due</small><b>20 Jan</b></span></div><div class="action-progress"><span><i style="width:28%"></i></span><b>28%</b></div></article>
           </div>
-          <button class="button demo-next" data-go="7">See maturity improve →</button>
+          <button type="button" class="button demo-next" data-go="7">See maturity improve →</button>
         </div>
-        <div class="demo-panel improve-panel" data-panel="7">
+        <div class="demo-panel improve-panel" role="tabpanel" id="panel-7" aria-labelledby="step-7" tabindex="0" data-panel="7" hidden>
           <div class="workflow-copy"><span>Continuous improvement</span><h3>Completed work changes the maturity picture</h3><p>As assigned actions are completed and supporting evidence is added, the organisation reviews the relevant CSMM responses and updates its maturity position.</p></div>
           <div class="maturity-shift workflow-card">
             <div><span>Previous position</span><strong>2.8</strong><small>Developing capability</small></div>
@@ -206,7 +205,7 @@
             <p><b>Response and Recovery</b><span>Evidence updated</span></p>
           </div>
           <p class="demo-disclaimer">Illustrative workflow only. Maturity changes depend on completed work, supporting evidence and updated CSMM responses.</p>
-          <button class="text-link demo-restart" data-go="1">Restart walkthrough ↺</button>
+          <button type="button" class="text-link demo-restart" data-go="1">Restart walkthrough ↺</button>
         </div>
       </div>
     </section>
@@ -240,11 +239,11 @@
         <div class="included"><span>Included at no cost</span><ul><li>Guided onboarding</li><li>Initial overall maturity score</li><li>Six-domain visualisation</li><li>Key improvement areas</li></ul></div>
       </div>
       <div class="onboarding-card reveal">
-        <div class="progress-label"><span>Getting started</span><b>Step 1 of 3</b></div><div class="progress"><i></i></div>
-        <label>What best describes your role?</label>
-        <div class="role-grid"><button data-role="business-leader">Business leader</button><button data-role="cybersecurity">Cybersecurity</button><button data-role="risk-compliance">Risk &amp; compliance</button><button data-role="technology">Technology</button></div>
-        <p>No credit card. Your full assessment continues securely in the C3 portal.</p>
-        <a class="button full" id="registration-link" href="https://portal.c3cyber.com.au/register">Create your account and continue →</a>
+        <div class="progress-label"><span>Before you continue</span><b>Choose your role</b></div>
+        <label id="role-question">What best describes your role?</label>
+        <div class="role-grid" role="group" aria-labelledby="role-question"><button type="button" aria-pressed="false" data-role="business-leader">Business leader</button><button type="button" aria-pressed="false" data-role="cybersecurity">Cybersecurity</button><button type="button" aria-pressed="false" data-role="risk-compliance">Risk &amp; compliance</button><button type="button" aria-pressed="false" data-role="technology">Technology</button></div>
+        <p>Choose the role closest to yours to personalise the handoff. The introductory assessment then opens securely in the C3 portal. No credit card is required.</p>
+        <a class="button full" id="registration-link" href="https://portal.c3cyber.com.au/register">Continue to the free assessment →</a>
       </div>
     </section>
 
@@ -272,7 +271,7 @@
     </section>
   </main>
 
-  <footer><a class="brand" href="#top" aria-label="C3 Cyber Operations home"><img class="brand-lockup" src="assets/c3-approved-lockup-transparent.png" alt="C3 Cyber Operations — Clarity. Capability. Confidence."></a><div><a href="#csmm">The CSMM</a><a href="#pricing">Pricing</a><a href="https://portal.c3cyber.com.au">Portal</a></div><p>© <span id="year"></span> C3 Cyber Operations</p></footer>
-  <script src="script.js?v=registration-1"></script>
+  <footer class="site-footer"><div class="footer-identity"><a class="brand" href="#top" aria-label="C3 Cyber Operations home"><img class="brand-lockup" src="assets/c3-approved-lockup-transparent.png" alt="C3 Cyber Operations — Clarity. Capability. Confidence."></a><p>C3 Cyber Operations · ABN 90 917 505 389</p></div><nav aria-label="Footer navigation"><a href="mailto:hello@c3cyber.com.au">Contact</a><a href="information.html#privacy">Privacy</a><a href="information.html#terms">Terms</a><a href="information.html#security">Security</a><a href="https://portal.c3cyber.com.au">Portal</a></nav><p>© <span id="year"></span> C3 Cyber Operations</p></footer>
+  <script src="script.js?v=accessibility-1"></script>
 </body>
 </html>
