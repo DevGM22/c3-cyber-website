@@ -1,25 +1,60 @@
 const panels = [...document.querySelectorAll('.demo-panel')];
 const stepButtons = [...document.querySelectorAll('.steps button')];
+const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+document.querySelectorAll('.choices button').forEach(button => button.setAttribute('aria-pressed', String(button.classList.contains('selected'))));
 
-function goToStep(step) {
-  panels.forEach(panel => panel.classList.toggle('active', panel.dataset.panel === String(step)));
-  stepButtons.forEach(button => button.classList.toggle('active', button.dataset.step === String(step)));
-  document.querySelector('.demo-shell').scrollIntoView({ behavior: 'smooth', block: 'center' });
+function goToStep(step, moveFocus = false) {
+  panels.forEach(panel => {
+    const active = panel.dataset.panel === String(step);
+    panel.classList.toggle('active', active);
+    panel.hidden = !active;
+  });
+  stepButtons.forEach(button => {
+    const active = button.dataset.step === String(step);
+    button.classList.toggle('active', active);
+    button.setAttribute('aria-selected', String(active));
+    button.tabIndex = active ? 0 : -1;
+    if (active) {
+      button.scrollIntoView({ behavior: reduceMotion ? 'auto' : 'smooth', block: 'nearest', inline: 'center' });
+      if (moveFocus) button.focus();
+    }
+  });
+  document.querySelector('.demo-shell').scrollIntoView({ behavior: reduceMotion ? 'auto' : 'smooth', block: 'center' });
 }
 
 document.querySelectorAll('[data-go]').forEach(button => button.addEventListener('click', () => goToStep(button.dataset.go)));
 stepButtons.forEach(button => button.addEventListener('click', () => goToStep(button.dataset.step)));
+document.querySelector('.steps').addEventListener('keydown', event => {
+  const current = stepButtons.indexOf(document.activeElement);
+  if (current < 0) return;
+  let next = current;
+  if (event.key === 'ArrowRight') next = (current + 1) % stepButtons.length;
+  else if (event.key === 'ArrowLeft') next = (current - 1 + stepButtons.length) % stepButtons.length;
+  else if (event.key === 'Home') next = 0;
+  else if (event.key === 'End') next = stepButtons.length - 1;
+  else return;
+  event.preventDefault();
+  goToStep(stepButtons[next].dataset.step, true);
+});
 
 document.querySelectorAll('.choices button').forEach(button => button.addEventListener('click', () => {
-  document.querySelectorAll('.choices button').forEach(choice => choice.classList.remove('selected'));
+  document.querySelectorAll('.choices button').forEach(choice => {
+    choice.classList.remove('selected');
+    choice.setAttribute('aria-pressed', 'false');
+  });
   button.classList.add('selected');
+  button.setAttribute('aria-pressed', 'true');
   const score = Number(button.dataset.score);
   document.querySelector('#demo-score').textContent = (2.2 + score * 0.2).toFixed(1);
 }));
 
 document.querySelectorAll('.role-grid button').forEach(button => button.addEventListener('click', () => {
-  document.querySelectorAll('.role-grid button').forEach(role => role.classList.remove('selected'));
+  document.querySelectorAll('.role-grid button').forEach(role => {
+    role.classList.remove('selected');
+    role.setAttribute('aria-pressed', 'false');
+  });
   button.classList.add('selected');
+  button.setAttribute('aria-pressed', 'true');
   const registrationLink = document.querySelector('#registration-link');
   registrationLink.href = `https://portal.c3cyber.com.au/register?role=${encodeURIComponent(button.dataset.role)}`;
 }));
@@ -29,13 +64,18 @@ const nav = document.querySelector('#nav');
 menu.addEventListener('click', () => {
   const open = nav.classList.toggle('open');
   menu.setAttribute('aria-expanded', String(open));
+  menu.setAttribute('aria-label', open ? 'Close navigation menu' : 'Open navigation menu');
 });
-nav.querySelectorAll('a').forEach(link => link.addEventListener('click', () => { nav.classList.remove('open'); menu.setAttribute('aria-expanded', 'false'); }));
+nav.querySelectorAll('a').forEach(link => link.addEventListener('click', () => { nav.classList.remove('open'); menu.setAttribute('aria-expanded', 'false'); menu.setAttribute('aria-label', 'Open navigation menu'); }));
 
-const observer = new IntersectionObserver(entries => entries.forEach(entry => {
-  if (entry.isIntersecting) { entry.target.classList.add('visible'); observer.unobserve(entry.target); }
-}), { threshold: 0.12 });
-document.querySelectorAll('.reveal').forEach(element => observer.observe(element));
+if (reduceMotion) {
+  document.querySelectorAll('.reveal').forEach(element => element.classList.add('visible'));
+} else {
+  const observer = new IntersectionObserver(entries => entries.forEach(entry => {
+    if (entry.isIntersecting) { entry.target.classList.add('visible'); observer.unobserve(entry.target); }
+  }), { threshold: 0.12 });
+  document.querySelectorAll('.reveal').forEach(element => observer.observe(element));
+}
 
 const grid = document.querySelector('.radar .grid');
 [1, .75, .5, .25].forEach(scale => {
