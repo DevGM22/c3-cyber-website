@@ -8,7 +8,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="styles.css?v=csmm-workflow-1">
+  <link rel="stylesheet" href="styles.css?v=csmm-workflow-2">
 </head>
 <body>
   <div class="grain" aria-hidden="true"></div>
@@ -103,12 +103,12 @@
       <div class="section-intro reveal">
         <p class="eyebrow">Interactive CSMM walkthrough</p>
         <h2>See how the CSMM turns<br><em>assessment into improvement.</em></h2>
-        <p>Follow an illustrative workflow from organisation setup and module assignment through evidence, results, actions and measurable maturity improvement.</p>
+        <p>Follow an illustrative workflow from organisation setup, module assignment and target maturity setting through evidence, results, actions and measurable maturity improvement.</p>
       </div>
       <div class="demo-shell reveal">
         <div class="demo-nav">
           <div class="demo-brand"><img class="demo-lockup" src="assets/c3-approved-lockup-transparent.png" alt="C3 Cyber Operations"><span>CSMM walkthrough</span></div>
-          <div class="steps" aria-label="CSMM workflow stages"><button class="active" data-step="1">1 · Users</button><button data-step="2">2 · Modules</button><button data-step="3">3 · Assess</button><button data-step="4">4 · Evidence</button><button data-step="5">5 · Results</button><button data-step="6">6 · Actions</button><button data-step="7">7 · Improve</button></div>
+          <div class="steps" aria-label="CSMM workflow stages"><button class="active" data-step="1">1 · Users</button><button data-step="2">2 · Modules</button><button data-step="targets">3 · Targets</button><button data-step="3">4 · Assess</button><button data-step="4">5 · Evidence</button><button data-step="5">6 · Results</button><button data-step="6">7 · Actions</button><button data-step="7">8 · Improve</button></div>
         </div>
         <div class="demo-panel active" data-panel="1">
           <div class="workflow-copy"><span>Organisation Administrator</span><h3>Build the assessment team</h3><p>The Organisation Administrator adds the people who will contribute to the CSMM and confirms their role in the assessment.</p></div>
@@ -131,7 +131,20 @@
             <article><span>05</span><div><strong>Compliance and Assurance</strong><small>Riley Patel</small></div><b>Assigned</b></article>
             <article><span>06</span><div><strong>Employee Training and Awareness</strong><small>Riley Patel</small></div><b>Assigned</b></article>
           </div>
-          <button class="button demo-next" data-go="3">Track assessment progress →</button>
+          <button class="button demo-next" data-go="targets">Set required maturity levels →</button>
+        </div>
+        <div class="demo-panel target-panel" data-panel="targets">
+          <div class="workflow-copy"><span>Organisation Administrator</span><h3>Set the required maturity level</h3><p>The Organisation Administrator sets the required maturity level for each CSMM category based on the organisation’s risk, obligations and operating context. These targets define the position the organisation is working toward.</p></div>
+          <div class="target-list workflow-card">
+            <div class="workflow-card-head"><span>Required maturity by category</span><b>Targets set</b></div>
+            <article><div><strong>Governance and Risk Management</strong><small>Required level</small></div><span><i>1</i><i>2</i><i>3</i><i class="selected">4</i><i>5</i></span><b>Managed</b></article>
+            <article><div><strong>Protective Measures</strong><small>Required level</small></div><span><i>1</i><i>2</i><i class="selected">3</i><i>4</i><i>5</i></span><b>Defined</b></article>
+            <article><div><strong>Detection Capability</strong><small>Required level</small></div><span><i>1</i><i>2</i><i>3</i><i class="selected">4</i><i>5</i></span><b>Managed</b></article>
+            <article><div><strong>Response and Recovery</strong><small>Required level</small></div><span><i>1</i><i>2</i><i>3</i><i class="selected">4</i><i>5</i></span><b>Managed</b></article>
+            <article><div><strong>Compliance and Assurance</strong><small>Required level</small></div><span><i>1</i><i>2</i><i class="selected">3</i><i>4</i><i>5</i></span><b>Defined</b></article>
+            <article><div><strong>Employee Training and Awareness</strong><small>Required level</small></div><span><i>1</i><i>2</i><i class="selected">3</i><i>4</i><i>5</i></span><b>Defined</b></article>
+          </div>
+          <button class="button demo-next" data-go="3">Begin the CSMM assessment →</button>
         </div>
         <div class="demo-panel assessment-panel" data-panel="3">
           <div class="question-copy"><span>CSMM assessment question · Governance and Risk Management</span><h3>How consistently are cybersecurity responsibilities defined and understood?</h3><p>This is an example of a question within the CSMM. The assigned user selects the description that best reflects the organisation today.</p><div class="completion"><b>Module progress</b><span><i style="width:62%"></i></span><small>8 of 13 questions complete</small></div></div>
@@ -162,10 +175,13 @@
           <button class="button demo-next" data-go="6">Turn gaps into actions →</button>
         </div>
         <div class="demo-panel action-panel" data-panel="6">
-          <div class="workflow-card-head"><span>Assigned improvement actions</span><b>3 in progress</b></div>
-          <div class="priority"><span>Priority 01</span><div><h3>Strengthen detection coverage</h3><p>Clarify monitoring requirements and address critical telemetry gaps.</p><small>Assigned to Sam Kelly</small></div><b>Due 30 Nov</b></div>
-          <div class="priority"><span>Priority 02</span><div><h3>Exercise incident responsibilities</h3><p>Validate decision rights and responsibilities through a tabletop exercise.</p><small>Assigned to Alex Morgan</small></div><b>Due 15 Dec</b></div>
-          <div class="priority"><span>Priority 03</span><div><h3>Formalise assurance reporting</h3><p>Create an evidence based view for executives and the board.</p><small>Assigned to Riley Patel</small></div><b>Due 20 Jan</b></div>
+          <div class="action-heading"><div><span>Improvement plan</span><h3>Assigned actions</h3></div><p>Track ownership, delivery and progress against the maturity gaps identified by the CSMM.</p></div>
+          <div class="action-summary"><div><strong>3</strong><span>Open actions</span></div><div><strong>2</strong><span>On track</span></div><div><strong>1</strong><span>Review due</span></div></div>
+          <div class="action-grid">
+            <article class="action-card"><header><span>Priority 01</span><b class="action-status on-track">On track</b></header><h3>Strengthen detection coverage</h3><p>Clarify monitoring requirements and address critical telemetry gaps.</p><div class="action-meta"><span><small>Owner</small><b>Sam Kelly</b></span><span><small>Due</small><b>30 Nov</b></span></div><div class="action-progress"><span><i style="width:72%"></i></span><b>72%</b></div></article>
+            <article class="action-card"><header><span>Priority 02</span><b class="action-status review">Review due</b></header><h3>Exercise incident responsibilities</h3><p>Validate decision rights and responsibilities through a tabletop exercise.</p><div class="action-meta"><span><small>Owner</small><b>Alex Morgan</b></span><span><small>Due</small><b>15 Dec</b></span></div><div class="action-progress"><span><i style="width:46%"></i></span><b>46%</b></div></article>
+            <article class="action-card"><header><span>Priority 03</span><b class="action-status on-track">On track</b></header><h3>Formalise assurance reporting</h3><p>Create an evidence based view for executives and the board.</p><div class="action-meta"><span><small>Owner</small><b>Riley Patel</b></span><span><small>Due</small><b>20 Jan</b></span></div><div class="action-progress"><span><i style="width:28%"></i></span><b>28%</b></div></article>
+          </div>
           <button class="button demo-next" data-go="7">See maturity improve →</button>
         </div>
         <div class="demo-panel improve-panel" data-panel="7">
