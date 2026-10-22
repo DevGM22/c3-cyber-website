@@ -8,7 +8,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="styles.css?v=framework-readiness-4">
+  <link rel="stylesheet" href="styles.css?v=roadmap-output-1">
 </head>
 <body>
   <div class="grain" aria-hidden="true"></div>
@@ -104,12 +104,12 @@
       <div class="section-intro reveal">
         <p class="eyebrow">Interactive CSMM walkthrough</p>
         <h2>See how the CSMM turns<br><em>assessment into improvement.</em></h2>
-        <p>Follow an illustrative workflow from organisation setup, module assignment and target maturity setting through evidence, results, actions and measurable maturity improvement.</p>
+        <p>Follow an illustrative workflow from organisation setup, module assignment and target maturity setting through evidence, results, a prioritised roadmap, assigned actions and measurable maturity improvement.</p>
       </div>
       <div class="demo-shell reveal">
         <div class="demo-nav">
           <div class="demo-brand"><img class="demo-lockup" src="assets/c3-approved-lockup-transparent.png" alt="C3 Cyber Operations"><span>CSMM walkthrough</span></div>
-          <div class="steps" aria-label="CSMM workflow stages"><button class="active" data-step="1">1 · Users</button><button data-step="2">2 · Modules</button><button data-step="targets">3 · Targets</button><button data-step="3">4 · Assess</button><button data-step="4">5 · Evidence</button><button data-step="5">6 · Results</button><button data-step="6">7 · Actions</button><button data-step="7">8 · Improve</button></div>
+          <div class="steps" aria-label="CSMM workflow stages"><button class="active" data-step="1">1 · Users</button><button data-step="2">2 · Modules</button><button data-step="targets">3 · Targets</button><button data-step="3">4 · Assess</button><button data-step="4">5 · Evidence</button><button data-step="5">6 · Results</button><button data-step="roadmap">7 · Roadmap</button><button data-step="6">8 · Actions</button><button data-step="7">9 · Improve</button></div>
         </div>
         <div class="demo-panel active" data-panel="1">
           <div class="workflow-copy"><span>Organisation Administrator</span><h3>Build the assessment team</h3><p>The Organisation Administrator adds the people who will contribute to the CSMM and confirms their role in the assessment.</p></div>
@@ -173,7 +173,18 @@
           <div class="radar-wrap"><svg class="radar" viewBox="0 0 300 300" role="img" aria-label="Six-domain maturity visualization"><g class="grid"></g><polygon class="target" points="150,36 249,93 249,207 150,264 51,207 51,93"></polygon><polygon class="actual" points="150,66 224,107 216,188 150,221 81,190 72,105"></polygon><g class="labels"><text x="150" y="22">Govern</text><text x="265" y="91">Protect</text><text x="264" y="222">Detect</text><text x="150" y="288">Respond</text><text x="4" y="222">Assure</text><text x="8" y="91">People</text></g></svg></div>
           <div class="result-legend"><span><i class="actual-dot"></i>Current</span><span><i class="target-dot"></i>Target</span></div>
           <div class="result-context"><b>Results show current and target maturity across all six CSMM categories.</b><p>Gaps help the organisation identify where action will have the greatest value.</p></div>
-          <button class="button demo-next" data-go="6">Turn gaps into actions →</button>
+          <button class="button demo-next" data-go="roadmap">Build the maturity roadmap →</button>
+        </div>
+        <div class="demo-panel roadmap-panel" data-panel="roadmap">
+          <div class="roadmap-heading"><div><span>Prioritised maturity roadmap</span><h3>Translate gaps into a guided change program</h3></div><p>The roadmap sequences the changes required to move each CSMM category from its current maturity to the level chosen by the Organisation Administrator.</p></div>
+          <div class="roadmap-status"><div><span>Current maturity</span><strong>2.8</strong></div><i>→</i><div><span>Chosen target</span><strong>4.0</strong></div><b>6 priority changes</b></div>
+          <div class="roadmap-track">
+            <article><header><span>NOW</span><small>0–90 days</small></header><div><b>Close critical visibility gaps</b><small>Detection Capability · Level 2 → 3</small></div><div><b>Confirm incident decision rights</b><small>Response and Recovery · Level 2 → 3</small></div></article>
+            <article><header><span>NEXT</span><small>3–6 months</small></header><div><b>Formalise assurance reporting</b><small>Compliance and Assurance · Level 2 → 3</small></div><div><b>Embed role-based awareness</b><small>Training and Awareness · Level 2 → 3</small></div></article>
+            <article><header><span>LATER</span><small>6–12 months</small></header><div><b>Measure control effectiveness</b><small>Protective Measures · Level 3 → 4</small></div><div><b>Integrate risk into planning</b><small>Governance and Risk · Level 3 → 4</small></div></article>
+          </div>
+          <p class="roadmap-note"><b>Guided by priority and dependency</b><span>Each roadmap item can be converted into an owned, measurable action.</span></p>
+          <button class="button demo-next" data-go="6">Assign roadmap actions →</button>
         </div>
         <div class="demo-panel action-panel" data-panel="6">
           <div class="action-heading"><div><span>Improvement plan</span><h3>Assigned actions</h3></div><p>Track ownership, delivery and progress against the maturity gaps identified by the CSMM.</p></div>
