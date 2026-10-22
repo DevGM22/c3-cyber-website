@@ -8,7 +8,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="styles.css?v=panther-system-2">
+  <link rel="stylesheet" href="styles.css?v=csmm-workflow-1">
 </head>
 <body>
   <div class="grain" aria-hidden="true"></div>
@@ -102,16 +102,39 @@
     <section class="section walkthrough panther-light" id="walkthrough">
       <div class="section-intro reveal">
         <p class="eyebrow">Interactive CSMM walkthrough</p>
-        <h2>See how a maturity question<br><em>becomes a decision.</em></h2>
-        <p>Explore an illustrative question and result. This walkthrough does not save data and is not an assessment.</p>
+        <h2>See how the CSMM turns<br><em>assessment into improvement.</em></h2>
+        <p>Follow an illustrative workflow from organisation setup and module assignment through evidence, results, actions and measurable maturity improvement.</p>
       </div>
       <div class="demo-shell reveal">
         <div class="demo-nav">
           <div class="demo-brand"><img class="demo-lockup" src="assets/c3-approved-lockup-transparent.png" alt="C3 Cyber Operations"><span>CSMM walkthrough</span></div>
-          <div class="steps"><button class="active" data-step="1">1 · Assess</button><button data-step="2">2 · View</button><button data-step="3">3 · Act</button></div>
+          <div class="steps" aria-label="CSMM workflow stages"><button class="active" data-step="1">1 · Users</button><button data-step="2">2 · Modules</button><button data-step="3">3 · Assess</button><button data-step="4">4 · Evidence</button><button data-step="5">5 · Results</button><button data-step="6">6 · Actions</button><button data-step="7">7 · Improve</button></div>
         </div>
         <div class="demo-panel active" data-panel="1">
-          <div class="question-copy"><span>Governance &amp; Risk Management · Example</span><h3>How consistently are cybersecurity responsibilities defined and understood?</h3><p>Choose the description closest to your organisation today.</p></div>
+          <div class="workflow-copy"><span>Organisation Administrator</span><h3>Build the assessment team</h3><p>The Organisation Administrator adds the people who will contribute to the CSMM and confirms their role in the assessment.</p></div>
+          <div class="people-list workflow-card">
+            <div class="workflow-card-head"><span>Organisation users</span><b>4 active</b></div>
+            <article><i>AM</i><div><strong>Alex Morgan</strong><small>Organisation Administrator</small></div><span class="status ready">Active</span></article>
+            <article><i>JL</i><div><strong>Jamie Lee</strong><small>Governance and risk</small></div><span class="status ready">Active</span></article>
+            <article><i>SK</i><div><strong>Sam Kelly</strong><small>Technology and protection</small></div><span class="status invited">Invited</span></article>
+            <article><i>RP</i><div><strong>Riley Patel</strong><small>People and compliance</small></div><span class="status ready">Active</span></article>
+          </div>
+          <button class="button demo-next" data-go="2">Assign CSMM modules →</button>
+        </div>
+        <div class="demo-panel module-panel" data-panel="2">
+          <div class="workflow-copy"><span>Module assignment</span><h3>Assign the right modules to the right people</h3><p>The Organisation Administrator allocates each CSMM category to users with the knowledge and responsibility to complete it.</p></div>
+          <div class="module-list workflow-card">
+            <article><span>01</span><div><strong>Governance and Risk Management</strong><small>Jamie Lee</small></div><b>Assigned</b></article>
+            <article><span>02</span><div><strong>Protective Measures</strong><small>Sam Kelly</small></div><b>Assigned</b></article>
+            <article><span>03</span><div><strong>Detection Capability</strong><small>Sam Kelly</small></div><b>Assigned</b></article>
+            <article><span>04</span><div><strong>Response and Recovery</strong><small>Alex Morgan</small></div><b>Assigned</b></article>
+            <article><span>05</span><div><strong>Compliance and Assurance</strong><small>Riley Patel</small></div><b>Assigned</b></article>
+            <article><span>06</span><div><strong>Employee Training and Awareness</strong><small>Riley Patel</small></div><b>Assigned</b></article>
+          </div>
+          <button class="button demo-next" data-go="3">Track assessment progress →</button>
+        </div>
+        <div class="demo-panel assessment-panel" data-panel="3">
+          <div class="question-copy"><span>CSMM assessment question · Governance and Risk Management</span><h3>How consistently are cybersecurity responsibilities defined and understood?</h3><p>This is an example of a question within the CSMM. The assigned user selects the description that best reflects the organisation today.</p><div class="completion"><b>Module progress</b><span><i style="width:62%"></i></span><small>8 of 13 questions complete</small></div></div>
           <div class="choices">
             <button data-score="1"><b>1</b><span><strong>Ad hoc</strong>Responsibilities are mostly informal or unclear.</span></button>
             <button data-score="2"><b>2</b><span><strong>Developing</strong>Key roles exist but are applied inconsistently.</span></button>
@@ -119,19 +142,42 @@
             <button data-score="4"><b>4</b><span><strong>Managed</strong>Accountability is measured and regularly reviewed.</span></button>
             <button data-score="5"><b>5</b><span><strong>Optimised</strong>Accountability continuously improves using evidence.</span></button>
           </div>
-          <button class="button demo-next" data-go="2">See an illustrative result →</button>
+          <button class="button demo-next" data-go="4">Add supporting evidence →</button>
         </div>
-        <div class="demo-panel result-panel" data-panel="2">
+        <div class="demo-panel evidence-panel" data-panel="4">
+          <div class="workflow-copy"><span>Evidence and assurance</span><h3>Support responses with evidence</h3><p>Users attach relevant documents and records to support their responses. The organisation can see what has been provided and where evidence is still required.</p></div>
+          <div class="evidence-list workflow-card">
+            <div class="upload-zone"><b>＋</b><span><strong>Upload evidence</strong><small>Policies, registers, plans and supporting records</small></span></div>
+            <article><span class="file-icon">PDF</span><div><strong>Cyber Security Policy</strong><small>Governance and Risk Management</small></div><b>Verified</b></article>
+            <article><span class="file-icon">XLS</span><div><strong>Risk Register</strong><small>Governance and Risk Management</small></div><b>Attached</b></article>
+            <article><span class="file-icon">DOC</span><div><strong>Incident Response Plan</strong><small>Response and Recovery</small></div><b>Review</b></article>
+          </div>
+          <button class="button demo-next" data-go="5">View CSMM results →</button>
+        </div>
+        <div class="demo-panel result-panel" data-panel="5">
           <div class="result-summary"><span>Illustrative overall score</span><strong id="demo-score">2.8</strong><small>Developing capability</small></div>
           <div class="radar-wrap"><svg class="radar" viewBox="0 0 300 300" role="img" aria-label="Six-domain maturity visualization"><g class="grid"></g><polygon class="target" points="150,36 249,93 249,207 150,264 51,207 51,93"></polygon><polygon class="actual" points="150,66 224,107 216,188 150,221 81,190 72,105"></polygon><g class="labels"><text x="150" y="22">Govern</text><text x="265" y="91">Protect</text><text x="264" y="222">Detect</text><text x="150" y="288">Respond</text><text x="4" y="222">Assure</text><text x="8" y="91">People</text></g></svg></div>
           <div class="result-legend"><span><i class="actual-dot"></i>Current</span><span><i class="target-dot"></i>Target</span></div>
-          <button class="button demo-next" data-go="3">See key improvement areas →</button>
+          <div class="result-context"><b>Results show current and target maturity across all six CSMM categories.</b><p>Gaps help the organisation identify where action will have the greatest value.</p></div>
+          <button class="button demo-next" data-go="6">Turn gaps into actions →</button>
         </div>
-        <div class="demo-panel action-panel" data-panel="3">
-          <div class="priority"><span>Priority 01</span><div><h3>Strengthen detection coverage</h3><p>Clarify monitoring requirements, identify critical telemetry gaps and establish a regular review cadence.</p></div><b>0–3 months</b></div>
-          <div class="priority"><span>Priority 02</span><div><h3>Exercise incident responsibilities</h3><p>Validate decision rights and hand-offs through a focused tabletop exercise.</p></div><b>0–3 months</b></div>
-          <div class="priority"><span>Priority 03</span><div><h3>Formalise assurance reporting</h3><p>Create a concise evidence-based view for executives and the board.</p></div><b>3–6 months</b></div>
-          <p class="demo-disclaimer">Example only. Your assessment results depend on your organisation’s responses and context.</p>
+        <div class="demo-panel action-panel" data-panel="6">
+          <div class="workflow-card-head"><span>Assigned improvement actions</span><b>3 in progress</b></div>
+          <div class="priority"><span>Priority 01</span><div><h3>Strengthen detection coverage</h3><p>Clarify monitoring requirements and address critical telemetry gaps.</p><small>Assigned to Sam Kelly</small></div><b>Due 30 Nov</b></div>
+          <div class="priority"><span>Priority 02</span><div><h3>Exercise incident responsibilities</h3><p>Validate decision rights and responsibilities through a tabletop exercise.</p><small>Assigned to Alex Morgan</small></div><b>Due 15 Dec</b></div>
+          <div class="priority"><span>Priority 03</span><div><h3>Formalise assurance reporting</h3><p>Create an evidence based view for executives and the board.</p><small>Assigned to Riley Patel</small></div><b>Due 20 Jan</b></div>
+          <button class="button demo-next" data-go="7">See maturity improve →</button>
+        </div>
+        <div class="demo-panel improve-panel" data-panel="7">
+          <div class="workflow-copy"><span>Continuous improvement</span><h3>Completed work changes the maturity picture</h3><p>As assigned actions are completed and supporting evidence is added, the organisation reviews the relevant CSMM responses and updates its maturity position.</p></div>
+          <div class="maturity-shift workflow-card">
+            <div><span>Previous position</span><strong>2.8</strong><small>Developing capability</small></div>
+            <i>→</i>
+            <div class="improved"><span>Updated position</span><strong>3.4</strong><small>Defined capability</small></div>
+            <p><b>Detection Capability</b><span>Action completed</span></p>
+            <p><b>Response and Recovery</b><span>Evidence updated</span></p>
+          </div>
+          <p class="demo-disclaimer">Illustrative workflow only. Maturity changes depend on completed work, supporting evidence and updated CSMM responses.</p>
           <button class="text-link demo-restart" data-go="1">Restart walkthrough ↺</button>
         </div>
       </div>
