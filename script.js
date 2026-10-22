@@ -20,6 +20,8 @@ document.querySelectorAll('.choices button').forEach(button => button.addEventLi
 document.querySelectorAll('.role-grid button').forEach(button => button.addEventListener('click', () => {
   document.querySelectorAll('.role-grid button').forEach(role => role.classList.remove('selected'));
   button.classList.add('selected');
+  const registrationLink = document.querySelector('#registration-link');
+  registrationLink.href = `https://portal.c3cyber.com.au/register?role=${encodeURIComponent(button.dataset.role)}`;
 }));
 
 const menu = document.querySelector('.menu-toggle');
