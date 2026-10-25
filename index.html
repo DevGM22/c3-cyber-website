@@ -8,7 +8,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="styles.css?v=buyer-journey-1">
+  <link rel="stylesheet" href="styles.css?v=results-preview-1">
 </head>
 <body>
   <div class="grain" aria-hidden="true"></div>
@@ -91,16 +91,39 @@
           <article><span>03</span><div><h3>Strengthen accountability</h3><p>See which improvements matter, who owns them and whether evidence supports the reported progress.</p></div></article>
           <article><span>04</span><div><h3>Monitor change over time</h3><p>Move beyond a single report by revisiting maturity, tracking actions and showing whether cyber capability is genuinely improving.</p></div></article>
         </div>
-        <aside class="board-brief reveal" aria-labelledby="board-questions-title">
-          <div class="board-brief-head"><span>Board briefing</span><b>Decision view</b></div>
-          <h3 id="board-questions-title">Questions the board can answer with greater confidence</h3>
-          <ul>
-            <li>Where are our most important capability gaps?</li>
-            <li>What maturity level is appropriate for our risk context?</li>
-            <li>What are we funding next and why?</li>
-            <li>Who is accountable for each improvement?</li>
-            <li>Are our actions producing measurable progress?</li>
-          </ul>
+        <aside class="board-results reveal" aria-labelledby="board-results-title">
+          <div class="board-results-screen">
+            <div class="board-results-head"><div><span>C3 portal results</span><h3 id="board-results-title">Annual CSMM review</h3><p>Current assessment position based on completed responses.</p></div><b>Report ready</b></div>
+            <div class="board-result-metrics" aria-label="Illustrative assessment metrics">
+              <article><span>Overall maturity</span><strong>2.8</strong><small>Current position</small></article>
+              <article><span>Completion</span><strong>100%</strong><small>96 of 96 answered</small></article>
+              <article><span>Evidence supported</span><strong>64</strong><small>of 96 responses</small></article>
+              <article><span>Validated</span><strong>18</strong><small>Reviewed responses</small></article>
+            </div>
+            <div class="board-dashboard-grid">
+              <div class="board-profile">
+                <div class="board-profile-head"><div><span>Assessment profile</span><strong>Current and target maturity</strong></div><div class="board-profile-legend"><i></i>Current <i></i>Target</div></div>
+                <svg viewBox="0 0 360 245" role="img" aria-label="Illustrative current and target maturity profile across six assessment domains">
+                  <g class="board-radar-grid"><polygon points="180,111 205,125 205,153 180,167 155,153 155,125"></polygon><polygon points="180,82 230,111 230,168 180,197 130,168 130,111"></polygon><polygon points="180,53 255,96 255,183 180,226 105,183 105,96"></polygon><line x1="180" y1="53" x2="180" y2="226"></line><line x1="105" y1="96" x2="255" y2="183"></line><line x1="255" y1="96" x2="105" y2="183"></line></g>
+                  <polygon class="board-radar-target" points="180,67 240,105 246,178 180,211 118,175 119,104"></polygon>
+                  <polygon class="board-radar-current" points="180,89 218,117 225,168 180,184 142,161 137,115"></polygon>
+                  <g class="board-radar-labels"><text x="180" y="30">Governance</text><text x="301" y="94">Protection</text><text x="305" y="200">Detection</text><text x="180" y="243">Response</text><text x="55" y="200">Assurance</text><text x="52" y="94">People</text></g>
+                </svg>
+              </div>
+              <div class="board-priorities">
+                <div class="board-panel-title"><span>Priority gaps</span><strong>Where attention is needed</strong></div>
+                <article><div><b>Protective Measures</b><small>Current 2.1 · Target 3.5</small></div><strong>1.4</strong><i style="--gap:88%"></i></article>
+                <article><div><b>Detection Capability</b><small>Current 2.3 · Target 3.5</small></div><strong>1.2</strong><i style="--gap:74%"></i></article>
+                <article><div><b>Response and Recovery</b><small>Current 2.5 · Target 3.5</small></div><strong>1.0</strong><i style="--gap:61%"></i></article>
+                <article><div><b>Governance and Risk</b><small>Current 3.0 · Target 3.7</small></div><strong>0.7</strong><i style="--gap:44%"></i></article>
+              </div>
+            </div>
+            <div class="board-dashboard-lower">
+              <div class="board-trend"><div class="board-panel-title"><span>Maturity trend</span><strong>Progress across review cycles</strong></div><svg viewBox="0 0 300 105" role="img" aria-label="Illustrative maturity trend rising from 2.1 to 2.8 across four reviews"><path d="M18 83 H282 M18 52 H282 M18 21 H282" class="trend-grid"></path><polyline points="24,78 105,65 186,43 276,28" class="trend-line"></polyline><g class="trend-points"><circle cx="24" cy="78" r="4"></circle><circle cx="105" cy="65" r="4"></circle><circle cx="186" cy="43" r="4"></circle><circle cx="276" cy="28" r="4"></circle></g><g class="trend-labels"><text x="24" y="101">2023</text><text x="105" y="101">H1 2024</text><text x="186" y="101">H2 2024</text><text x="276" y="101">Current</text></g></svg></div>
+              <div class="board-actions"><div class="board-panel-title"><span>Improvement actions</span><strong>Accountability at a glance</strong></div><div><article><b>14</b><small>Complete</small></article><article><b>9</b><small>In progress</small></article><article><b>4</b><small>Overdue</small></article></div><p><span style="--progress:67%"></span><b>67% evidence supported</b></p></div>
+            </div>
+            <p class="board-results-note">Illustrative results view using demonstration data</p>
+          </div>
           <a class="button full" href="mailto:hello@c3cyber.com.au?subject=Discuss%20C3%20for%20board%20oversight">Discuss board oversight →</a>
         </aside>
       </div>
