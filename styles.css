@@ -195,3 +195,25 @@ body{background:#f5f6f1}
 .board-brief li:before{content:"";position:absolute;left:2px;top:19px;width:8px;height:8px;background:var(--green);border-radius:50%}
 @media(max-width:900px){.board-layout{grid-template-columns:1fr;gap:50px}.board-brief{max-width:680px}}
 @media(max-width:600px){.board-layout{margin-top:52px}.board-brief{padding:28px 22px}.board-brief h3{font-size:24px}.board-outcomes article{grid-template-columns:35px 1fr;gap:12px}}
+
+/* CSMM introduction and readability */
+.csmm-intro{padding:80px max(7vw,calc((100vw - 1240px)/2));display:grid;grid-template-columns:.95fr 1.05fr;gap:8vw;background:#eef3ee;border-bottom:1px solid var(--line);scroll-margin-top:20px}
+.csmm-intro-copy .eyebrow{margin-bottom:18px}
+.csmm-intro-copy h2{font:600 clamp(32px,3.4vw,49px)/1.16 Manrope,sans-serif;letter-spacing:-.035em;margin:0}
+.csmm-intro-copy>p:last-child{color:var(--muted);font-size:16px;line-height:1.75;margin:25px 0 0;max-width:590px}
+.csmm-journey{list-style:none;padding:0;margin:0}
+.csmm-journey li{display:grid;grid-template-columns:48px 1fr;gap:20px;padding:20px 0;border-top:1px solid #cbd6ce}
+.csmm-journey li:last-child{border-bottom:1px solid #cbd6ce}
+.csmm-journey li>span{color:var(--green);font:700 12px Manrope,sans-serif;letter-spacing:.12em;margin-top:3px}
+.csmm-journey strong{display:block;font:600 18px/1.35 Manrope,sans-serif}
+.csmm-journey p{color:var(--muted);font-size:15px;line-height:1.65;margin:6px 0 0}
+.eyebrow{font-size:12px;line-height:1.5}
+.outcome-stack p,.domain-list p,.instinct-grid p,.framework-feature-copy>p:last-child,.framework-grid p,.framework-note p,.board-outcomes p{font-size:15px}
+.environment-grid p{font-size:13px;line-height:1.6}
+.onboarding-card>p{font-size:13px;line-height:1.6}
+.price-card li{font-size:15px}
+.faq-answer p{font-size:16px}
+.board-brief li{font-size:14px;line-height:1.6}
+.site-footer .footer-identity p,.site-footer>p{font-size:12px}
+@media(max-width:900px){.csmm-intro{grid-template-columns:1fr;gap:45px;padding-top:70px;padding-bottom:70px}}
+@media(max-width:600px){.csmm-intro{padding:58px 6vw}.csmm-intro-copy h2{font-size:32px}.csmm-intro-copy>p:last-child{font-size:16px}.csmm-journey li{grid-template-columns:36px 1fr;gap:12px;padding:19px 0}.csmm-journey strong{font-size:17px}.csmm-journey p{font-size:15px}.hero .eyebrow{font-size:12px;line-height:1.55}}
