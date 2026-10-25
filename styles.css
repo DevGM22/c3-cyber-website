@@ -168,3 +168,30 @@ body{background:#f5f6f1}
 @media(max-width:900px){.faq-heading{grid-template-columns:1fr;gap:28px}.faq-list{margin-top:50px}}
 @media(max-width:600px){.faq-list summary{padding:23px 0;gap:18px}.faq-answer{padding:0 38px 24px 0}}
 @media(prefers-reduced-motion:reduce){.faq-list summary i:before,.faq-list summary i:after{transition:none}}
+
+/* Board and executive value */
+.board-value{background:radial-gradient(circle at 85% 10%,rgba(69,224,149,.12),transparent 27%),linear-gradient(145deg,#071d21,#041411);color:#fff;position:relative;overflow:hidden}
+.board-value:before{content:"";position:absolute;inset:0;pointer-events:none;opacity:.12;background:repeating-linear-gradient(120deg,transparent 0 145px,rgba(111,232,169,.18) 146px,transparent 147px 290px)}
+.board-value>*{position:relative}
+.board-heading{max-width:900px}
+.board-heading .eyebrow{color:#55df9b}
+.board-heading h2{font-size:clamp(44px,4.8vw,70px)}
+.board-heading h2 em{color:#55df9b}
+.board-heading>p:last-child{max-width:780px;color:#afc0bc;font-size:17px;line-height:1.75;margin:28px 0 0}
+.board-layout{display:grid;grid-template-columns:1.05fr .95fr;gap:8vw;align-items:start;margin-top:75px}
+.board-outcomes article{display:grid;grid-template-columns:48px 1fr;gap:22px;padding:25px 0;border-top:1px solid #29433d}
+.board-outcomes article:last-child{border-bottom:1px solid #29433d}
+.board-outcomes article>span{color:#55df9b;font:700 10px Manrope,sans-serif;letter-spacing:.14em;margin-top:5px}
+.board-outcomes h3{font:600 20px/1.3 Manrope,sans-serif;margin:0 0 8px}
+.board-outcomes p{color:#9fb2ad;font-size:14px;line-height:1.65;margin:0}
+.board-brief{background:#f5f7f2;color:var(--ink);padding:36px;box-shadow:0 30px 80px rgba(0,0,0,.25)}
+.board-brief-head{display:flex;justify-content:space-between;padding-bottom:18px;border-bottom:1px solid var(--line);font:700 10px Manrope,sans-serif;text-transform:uppercase;letter-spacing:.12em}
+.board-brief-head span{color:var(--green)}
+.board-brief-head b{color:var(--muted)}
+.board-brief h3{font:600 28px/1.25 Manrope,sans-serif;margin:28px 0 24px}
+.board-brief ul{list-style:none;padding:0;margin:0 0 30px}
+.board-brief li{position:relative;padding:13px 0 13px 27px;border-top:1px solid var(--line);font-size:13px;line-height:1.5}
+.board-brief li:last-child{border-bottom:1px solid var(--line)}
+.board-brief li:before{content:"";position:absolute;left:2px;top:19px;width:8px;height:8px;background:var(--green);border-radius:50%}
+@media(max-width:900px){.board-layout{grid-template-columns:1fr;gap:50px}.board-brief{max-width:680px}}
+@media(max-width:600px){.board-layout{margin-top:52px}.board-brief{padding:28px 22px}.board-brief h3{font-size:24px}.board-outcomes article{grid-template-columns:35px 1fr;gap:12px}}
