@@ -59,6 +59,21 @@ document.querySelectorAll('.role-grid button').forEach(button => button.addEvent
   registrationLink.href = `https://portal.c3cyber.com.au/register?role=${encodeURIComponent(button.dataset.role)}`;
 }));
 
+const billingButtons = [...document.querySelectorAll('.billing-toggle [data-billing]')];
+const planPrices = [...document.querySelectorAll('.plan-price[data-monthly][data-annual]')];
+const pricePeriods = [...document.querySelectorAll('.price-period')];
+
+function showBillingFrequency(frequency) {
+  const annual = frequency === 'annual';
+  billingButtons.forEach(button => button.setAttribute('aria-pressed', String(button.dataset.billing === frequency)));
+  planPrices.forEach(price => { price.textContent = price.dataset[frequency]; });
+  pricePeriods.forEach(period => {
+    period.textContent = annual ? 'per year · ex GST · billed annually' : 'per month · ex GST · 12 month term';
+  });
+}
+
+billingButtons.forEach(button => button.addEventListener('click', () => showBillingFrequency(button.dataset.billing)));
+
 const menu = document.querySelector('.menu-toggle');
 const nav = document.querySelector('#nav');
 menu.addEventListener('click', () => {

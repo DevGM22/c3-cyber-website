@@ -148,6 +148,61 @@ body{background:#f5f6f1}
 @media(max-width:600px){.site-footer{padding:34px 6vw}.information-header{height:78px;padding:0 6vw}.information-header .brand-lockup{width:160px}.information-header .button{padding:10px 12px!important;font-size:11px}.information-main{padding:65px 6vw 90px}.information-nav{gap:14px;overflow-x:auto}.information-nav a{font-size:12px}.roadmap-track header small,.availability,.framework-grid article>span{font-size:10px}}
 @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}.reveal{opacity:1;transform:none;transition:none}.button,.price-card,.framework-grid>article,.environment-grid article{transition:none}}
 
+/* Public subscription pricing */
+.pricing{background:linear-gradient(180deg,#f8f8f3 0%,#f0f4ef 100%)}
+.pricing-heading{display:grid;grid-template-columns:minmax(0,1fr) auto;gap:45px;align-items:end}
+.pricing-heading .section-intro{max-width:820px}
+.billing-toggle{display:inline-flex;gap:4px;padding:5px;border:1px solid var(--line);background:#fff}
+.billing-toggle button{min-height:50px;padding:7px 16px;border:0;background:transparent;color:var(--muted);font:700 13px Manrope,sans-serif;cursor:pointer}
+.billing-toggle button[aria-pressed="true"]{background:var(--navy);color:#fff}
+.billing-toggle span{display:block;margin-top:2px;color:#73e2a7;font-size:9px;text-transform:uppercase;letter-spacing:.06em}
+.trial-offer{display:flex;align-items:center;justify-content:space-between;gap:28px;margin-top:55px;padding:22px 25px;border:1px solid #b9dbc7;background:#e8f5ec}
+.trial-offer>div{display:grid;grid-template-columns:auto 1fr;gap:4px 18px;align-items:center}
+.trial-offer span{grid-column:1;font:700 11px Manrope,sans-serif;text-transform:uppercase;letter-spacing:.12em;color:var(--green)}
+.trial-offer strong{grid-column:2;font:600 16px Manrope,sans-serif}
+.trial-offer small{grid-column:2;color:var(--muted);font-size:12px}
+.trial-offer .button{flex:0 0 auto;padding:14px 20px}
+.pricing-grid.pricing-tiers{grid-template-columns:repeat(3,minmax(0,1fr));max-width:none;margin-top:24px;gap:18px;align-items:stretch}
+.pricing-tiers .price-card{min-width:0;padding:32px 28px}
+.pricing-tiers .price-card.featured{transform:translateY(-5px);box-shadow:0 28px 70px rgba(3,27,28,.18)}
+.pricing-tiers .price-card.featured:hover{transform:translateY(-9px)}
+.pricing-tiers .price-card b.plan-price{font-size:35px;letter-spacing:-.035em}
+.pricing-tiers .price-card small{font-size:12px}
+.plan-purpose{min-height:66px;margin:23px 0 0;color:var(--muted);font-size:14px;line-height:1.55}
+.featured .plan-purpose{color:#aebfba}
+.pricing-tiers .price-card ul{margin-top:15px;padding-top:18px}
+.pricing-tiers .price-card li{position:relative;padding:7px 0 7px 23px;font-size:14px;line-height:1.45}
+.pricing-tiers .price-card li:before{position:absolute;left:0}
+.pricing-tiers .price-card li.not-included{color:var(--muted)}
+.pricing-tiers .price-card li.not-included:before{content:'—'}
+.seat-pricing{margin-top:25px;padding:25px;border:1px solid var(--line);background:#fff}
+.seat-pricing>div>span{display:block;color:var(--green);font:700 11px Manrope,sans-serif;text-transform:uppercase;letter-spacing:.12em}
+.seat-pricing>div>strong{display:block;margin-top:7px;font:600 18px Manrope,sans-serif}
+.seat-pricing dl{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;margin:21px 0 0;background:var(--line);border:1px solid var(--line)}
+.seat-pricing dl>div{display:flex;justify-content:space-between;gap:18px;padding:16px;background:#f7f8f4}
+.seat-pricing dt{color:var(--muted);font-size:13px}
+.seat-pricing dd{margin:0;font-weight:700;font-size:13px;white-space:nowrap}
+.seat-pricing>p{margin:16px 0 0;color:var(--muted);font-size:12px;line-height:1.6}
+.eligible-offers{display:grid;grid-template-columns:1.15fr 1fr 1fr;gap:18px;margin-top:24px;padding:30px;background:var(--navy);color:#fff}
+.offer-intro{padding-right:20px}
+.offer-intro .eyebrow{margin-bottom:12px;color:#58df99}
+.offer-intro h3{margin:0;font:600 24px/1.25 Manrope,sans-serif}
+.offer-intro>p:last-child{margin:13px 0 0;color:#aebfba;font-size:13px;line-height:1.55}
+.eligible-offers article{padding:20px;border:1px solid #29443e;background:#0b2925}
+.eligible-offers article>span{display:block;color:#58df99;font:700 10px Manrope,sans-serif;text-transform:uppercase;letter-spacing:.11em}
+.eligible-offers article>strong{display:block;margin-top:14px;font:600 17px/1.45 Manrope,sans-serif}
+.eligible-offers article>p{margin:12px 0 0;color:#aebfba;font-size:12px;line-height:1.55}
+.partner-pricing-note{display:flex;align-items:center;justify-content:space-between;gap:24px;margin-top:18px;padding:19px 22px;border:1px solid #cdd8d1;background:#f5f7f3}
+.partner-pricing-note>div{display:grid;gap:4px}
+.partner-pricing-note span{color:var(--green);font:700 10px Manrope,sans-serif;text-transform:uppercase;letter-spacing:.1em}
+.partner-pricing-note strong{font:600 14px Manrope,sans-serif}
+.partner-pricing-note .text-link{flex:0 0 auto;font-size:12px}
+.pricing .pricing-note{max-width:980px;margin:20px auto 0;line-height:1.65}
+
+@media(max-width:1050px){.pricing-grid.pricing-tiers{grid-template-columns:1fr}.pricing-tiers .price-card{max-width:720px;width:100%;margin:auto}.pricing-tiers .price-card.featured{transform:none}.pricing-tiers .price-card.featured:hover{transform:translateY(-5px)}.plan-purpose{min-height:0}.eligible-offers{grid-template-columns:1fr 1fr}.offer-intro{grid-column:1/-1;max-width:720px}}
+@media(max-width:760px){.pricing-heading{grid-template-columns:1fr;gap:25px}.billing-toggle{justify-self:start}.trial-offer{align-items:stretch;flex-direction:column}.trial-offer>div{grid-template-columns:1fr}.trial-offer span,.trial-offer strong,.trial-offer small{grid-column:1}.seat-pricing dl{grid-template-columns:1fr}.eligible-offers{grid-template-columns:1fr;padding:24px}.offer-intro{grid-column:1}.partner-pricing-note{align-items:flex-start;flex-direction:column}}
+@media(max-width:420px){.billing-toggle{width:100%}.billing-toggle button{flex:1;padding-left:8px;padding-right:8px}.pricing-tiers .price-card{padding:29px 22px}.seat-pricing{padding:22px 18px}.seat-pricing dl>div{align-items:flex-start;flex-direction:column;gap:5px}.partner-pricing-note{padding:18px}}
+
 /* Frequently asked questions */
 .faq{background:#eef3ee;border-top:1px solid var(--line)}
 .faq-heading{display:grid;grid-template-columns:1.1fr .9fr;gap:8vw;align-items:end}

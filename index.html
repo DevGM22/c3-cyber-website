@@ -8,7 +8,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="styles.css?v=maturity-dashboard-3">
+  <link rel="stylesheet" href="styles.css?v=pricing-tiers-1">
 </head>
 <body>
   <div class="grain" aria-hidden="true"></div>
@@ -309,13 +309,80 @@
       </div>
     </section>
 
-    <section class="section pricing" id="pricing">
-      <div class="section-intro reveal"><p class="eyebrow">From trial to annual access</p><h2>Turn an initial baseline<br><em>into sustained progress.</em></h2><p>Begin with a 14 day trial. Continue with annual access when you are ready to retain your evidence, manage accountable actions and track improvement year after year.</p></div>
-      <div class="pricing-grid">
-        <article class="price-card reveal"><div><span>14 day trial</span><b>Free</b><small>No credit card</small></div><ul><li>Explore the CSMM workflow</li><li>Begin your maturity baseline</li><li>Work with evidence and actions</li><li>See current and target maturity</li></ul><a class="button secondary full" href="https://portal.c3cyber.com.au/register">Start your 14 day trial</a></article>
-        <article class="price-card featured reveal"><div class="ribbon">Annual plan</div><div><span>C3 Platform</span><b>Talk to us</b><small>Annual subscription</small></div><ul><li>Full CSMM assessment experience</li><li>Current and target maturity views</li><li>Framework readiness modules</li><li>Prioritised improvement roadmap</li><li>Progress tracking and reporting</li><li>Secure organisational workspace</li></ul><a class="button full" href="mailto:hello@c3cyber.com.au?subject=C3%20platform%20annual%20access">Request annual pricing</a></article>
+    <section class="section pricing" id="pricing" aria-labelledby="pricing-title">
+      <div class="pricing-heading reveal">
+        <div class="section-intro">
+          <p class="eyebrow">Clear, predictable pricing</p>
+          <h2 id="pricing-title">Choose the access<br><em>your organisation needs.</em></h2>
+          <p>Start with a free 14 day trial. Continue with the plan that matches your team, board access and framework needs.</p>
+        </div>
+        <div class="billing-toggle" role="group" aria-label="Show subscription prices by billing frequency">
+          <button type="button" data-billing="monthly" aria-pressed="false">Monthly</button>
+          <button type="button" data-billing="annual" aria-pressed="true">Annual <span>Save 2 months</span></button>
+        </div>
       </div>
-      <p class="pricing-note">Pricing is tailored to organisation size and engagement needs. We will confirm scope and annual cost before you commit.</p>
+
+      <div class="trial-offer reveal">
+        <div><span>14 day trial</span><strong>Explore the CSMM workflow, evidence, actions and maturity views.</strong><small>No credit card required.</small></div>
+        <a class="button" href="https://portal.c3cyber.com.au/register">Start your free trial</a>
+      </div>
+
+      <div class="pricing-grid pricing-tiers" aria-live="polite">
+        <article class="price-card reveal">
+          <div><span>Essential</span><b class="plan-price" data-monthly="A$199" data-annual="A$1,990">A$1,990</b><small class="price-period">per year · ex GST · billed annually</small></div>
+          <p class="plan-purpose">Build a credible baseline with a focused team.</p>
+          <ul>
+            <li>5 organisation users in total</li>
+            <li>Up to 1 administrator within those users</li>
+            <li>CSMM assessment and maturity views</li>
+            <li>Evidence, roadmap and action tracking</li>
+            <li class="not-included">Board Portal requires Professional or Governance</li>
+          </ul>
+          <a class="button secondary full" href="mailto:hello@c3cyber.com.au?subject=C3%20Essential%20subscription">Discuss Essential</a>
+        </article>
+
+        <article class="price-card featured reveal">
+          <div class="ribbon">Most popular</div>
+          <div><span>Professional</span><b class="plan-price" data-monthly="A$499" data-annual="A$4,990">A$4,990</b><small class="price-period">per year · ex GST · billed annually</small></div>
+          <p class="plan-purpose">Coordinate operational, governance and framework work.</p>
+          <ul>
+            <li>10 organisation users in total</li>
+            <li>Up to 2 administrators within those users</li>
+            <li>2 board members</li>
+            <li>CSMM, ASD Essentials, NIST CSF and SOC 2</li>
+            <li>Board visibility, evidence, roadmap and action tracking</li>
+          </ul>
+          <a class="button full" href="mailto:hello@c3cyber.com.au?subject=C3%20Professional%20subscription">Discuss Professional</a>
+        </article>
+
+        <article class="price-card reveal">
+          <div><span>Governance</span><b class="plan-price" data-monthly="A$699" data-annual="A$6,990">A$6,990</b><small class="price-period">per year · ex GST · billed annually</small></div>
+          <p class="plan-purpose">Extend participation and board oversight across the organisation.</p>
+          <ul>
+            <li>Unlimited organisation users, subject to fair use</li>
+            <li>Up to 3 administrators within those users</li>
+            <li>5 board members</li>
+            <li>Full framework library</li>
+            <li>Governance oversight, reporting and improvement tracking</li>
+          </ul>
+          <a class="button secondary full" href="mailto:hello@c3cyber.com.au?subject=C3%20Governance%20subscription">Discuss Governance</a>
+        </article>
+      </div>
+
+      <div class="seat-pricing reveal">
+        <div><span>Need more capacity?</span><strong>Additional seats are available at clear monthly rates.</strong></div>
+        <dl><div><dt>Organisation user</dt><dd>A$10/month</dd></div><div><dt>Administrator</dt><dd>A$20/month</dd></div><div><dt>Board member</dt><dd>A$29/month</dd></div></dl>
+        <p>An additional administrator includes an organisation-user seat. Additional board seats are available only with Professional or Governance. Prices exclude GST and are invoiced according to your billing arrangement.</p>
+      </div>
+
+      <div class="eligible-offers reveal">
+        <div class="offer-intro"><p class="eyebrow">Eligible first-year offers</p><h3>Extra support for organisations getting started.</h3><p>Eligibility is confirmed by C3 before activation. Offers apply to the base subscription for the first 12 months and cannot be combined.</p></div>
+        <article><span>Startup pricing</span><strong>Essential A$99/month<br>Professional A$299/month</strong><p>Available for the first 12 months. Governance is not included in the startup offer.</p></article>
+        <article><span>Founding Customer</span><strong>25% off the base subscription</strong><p>Available for the first 12 months and limited to the first 20 paying organisations.</p></article>
+      </div>
+
+      <div class="partner-pricing-note reveal"><div><span>Advisory or reseller partner?</span><strong>Ask about the C3 partner program and approved partner arrangements.</strong></div><a class="text-link" href="mailto:hello@c3cyber.com.au?subject=C3%20partner%20program">Discuss the partner program</a></div>
+      <p class="pricing-note">Prices are in Australian dollars and exclude GST. Subscriptions have a 12 month minimum term. Annual billing is paid upfront. Subscriptions renew automatically until cancelled. Additional seats are charged separately at the rates shown above.</p>
     </section>
 
     <section class="section faq" id="faq" aria-labelledby="faq-title">
