@@ -62,11 +62,15 @@ document.querySelectorAll('.role-grid button').forEach(button => button.addEvent
 const billingButtons = [...document.querySelectorAll('.billing-toggle [data-billing]')];
 const planPrices = [...document.querySelectorAll('.plan-price[data-monthly][data-annual]')];
 const pricePeriods = [...document.querySelectorAll('.price-period')];
+const foundingPrices = [...document.querySelectorAll('.founding-price[data-monthly][data-annual]')];
+const foundingPeriods = [...document.querySelectorAll('.founding-period')];
 
 function showBillingFrequency(frequency) {
   const annual = frequency === 'annual';
   billingButtons.forEach(button => button.setAttribute('aria-pressed', String(button.dataset.billing === frequency)));
   planPrices.forEach(price => { price.textContent = price.dataset[frequency]; });
+  foundingPrices.forEach(price => { price.textContent = price.dataset[frequency]; });
+  foundingPeriods.forEach(period => { period.textContent = annual ? 'per year, ex GST · paid upfront' : 'per month, ex GST'; });
   pricePeriods.forEach(period => {
     period.textContent = annual ? 'per year · ex GST · billed annually' : 'per month · ex GST · 12 month term';
   });
