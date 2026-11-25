@@ -400,6 +400,7 @@ body{background:#f5f6f1}
 .research-foundation>.eyebrow{margin-bottom:10px}
 .research-foundation h3,.platform-benefits h3{font:700 clamp(25px,2.5vw,38px)/1.2 Manrope,sans-serif;letter-spacing:-.035em;margin:0 0 12px}
 .research-foundation>p:not(.eyebrow){font-size:16px;line-height:1.6;color:#465f5a;max-width:1000px;margin:8px 0}
+@media(min-width:1151px){.research-foundation>p:not(.eyebrow){max-width:90%}}
 .research-source-box{background:rgba(255,255,255,.8);border:1px solid #c8ddd0;border-radius:10px;padding:18px;margin-top:24px}
 .research-source-box>h4{font:700 21px Manrope,sans-serif;text-align:center;margin:0 0 18px}
 .research-grid{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:10px}
