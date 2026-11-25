@@ -374,3 +374,17 @@ body{background:#f5f6f1}
 .csmm-loop span{display:inline-block;position:relative;top:12px;padding:8px 16px;background:#08251e;border:1px solid #23ba7d;border-radius:30px;font-size:13px;font-weight:600;color:#e2eee8}
 @media(max-width:1100px){.site-header nav{background:#061c18;color:#fff}.menu-toggle{color:#fff;border-color:#64736e}.hero-copy{width:min(710px,72vw)}.csmm-intro{grid-template-columns:1fr;gap:32px}.csmm-intro-copy{max-width:740px}}
 @media(max-width:600px){.hero{min-height:0;padding:55px 6vw 45px}.hero-copy{width:100%}.hero h1{font-size:clamp(36px,9vw,47px)}.hero .eyebrow{font-size:11px}.hero-support{font-size:16px}.hero-actions{gap:12px;margin-top:24px}.hero .button{min-width:0}.csmm-intro{padding:40px 6vw 52px}.csmm-journey{grid-template-columns:repeat(2,minmax(0,1fr));gap:14px}.csmm-journey li,.csmm-journey li:last-child{min-height:150px;padding:14px 8px}.csmm-journey li:not(:last-child):after{display:none}.csmm-loop{margin-left:4%;margin-right:4%}.csmm-loop span{font-size:12px;padding:7px 10px}}
+
+
+/* Shared panther artwork across hero and CSMM introduction */
+.panther-story{position:relative;isolation:isolate;background:#051916;overflow:hidden}
+.panther-story:before{content:"";position:absolute;z-index:-1;inset:0;background:linear-gradient(90deg,#031411 0%,rgba(3,20,17,.96) 26%,rgba(3,20,17,.72) 45%,rgba(3,20,17,.12) 76%),linear-gradient(0deg,#051916 0%,rgba(5,25,22,.86) 12%,rgba(5,25,22,.18) 41%,transparent 70%),url('assets/panther-hero.jpg') right top / 100% auto no-repeat;pointer-events:none}
+.panther-story .hero{background:transparent}
+.panther-story .hero-shade{background:none}
+.panther-story .hero-caption{display:grid;right:max(6vw,calc((100vw - 1360px)/2));bottom:48px;gap:6px;padding:10px 0 10px 14px;border-left:2px solid #45d98a;text-align:left;text-shadow:0 1px 5px #00110e}
+.panther-story .hero-caption span{font:700 13px/1.3 Manrope,sans-serif;letter-spacing:.04em;text-transform:none;color:#45d98a}
+.panther-story .hero-caption b{font:italic 400 12px/1.4 'DM Sans',sans-serif;font-style:italic;color:#e0e9e4}
+.panther-story .csmm-intro{background:linear-gradient(0deg,rgba(5,25,22,.75),transparent);border-top:0;border-bottom:0}
+.panther-story .csmm-journey li{background:linear-gradient(145deg,rgba(10,48,38,.86),rgba(6,28,24,.94))}
+@media(max-width:1100px){.panther-story:before{background:linear-gradient(90deg,rgba(3,20,17,.98),rgba(3,20,17,.82) 55%,rgba(3,20,17,.35)),linear-gradient(0deg,#051916 15%,transparent 72%),url('assets/panther-hero.jpg') right top / auto 65% no-repeat}.panther-story .hero-caption{position:relative;right:auto;bottom:auto;align-self:flex-end;margin-top:20px}.panther-story .hero{flex-direction:column;align-items:flex-start}.panther-story .hero-caption b{font-size:12px}}
+@media(max-width:600px){.panther-story:before{background:linear-gradient(90deg,rgba(3,20,17,.96),rgba(3,20,17,.70)),linear-gradient(0deg,#051916 40%,transparent 78%),url('assets/panther-hero.jpg') 72% top / auto 48% no-repeat}.panther-story .hero-caption{margin-top:24px;align-self:flex-end}.panther-story .hero-caption span{font-size:12px}.panther-story .csmm-intro{padding-top:28px}}
