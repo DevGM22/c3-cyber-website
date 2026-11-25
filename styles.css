@@ -388,3 +388,6 @@ body{background:#f5f6f1}
 .panther-story .csmm-journey li{background:linear-gradient(145deg,rgba(10,48,38,.86),rgba(6,28,24,.94))}
 @media(max-width:1100px){.panther-story:before{background:linear-gradient(90deg,rgba(3,20,17,.98),rgba(3,20,17,.82) 55%,rgba(3,20,17,.35)),linear-gradient(0deg,#051916 15%,transparent 72%),url('assets/panther-hero.jpg') right top / auto 65% no-repeat}.panther-story .hero-caption{position:relative;right:auto;bottom:auto;align-self:flex-end;margin-top:20px}.panther-story .hero{flex-direction:column;align-items:flex-start}.panther-story .hero-caption b{font-size:12px}}
 @media(max-width:600px){.panther-story:before{background:linear-gradient(90deg,rgba(3,20,17,.96),rgba(3,20,17,.70)),linear-gradient(0deg,#051916 40%,transparent 78%),url('assets/panther-hero.jpg') 72% top / auto 48% no-repeat}.panther-story .hero-caption{margin-top:24px;align-self:flex-end}.panther-story .hero-caption span{font-size:12px}.panther-story .csmm-intro{padding-top:28px}}
+
+/* Desktop caption: place below the panther's jaw, above the journey cards. */
+@media(min-width:1101px){.panther-story .hero{overflow:visible}.panther-story .hero-caption{right:calc(max(6vw, (100vw - 1360px)/2) - 30px);bottom:-52px;z-index:2}}
