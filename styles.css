@@ -448,3 +448,60 @@ body{background:#f5f6f1}
 @media(max-width:1150px){.research-grid{grid-template-columns:repeat(3,minmax(0,1fr))}.research-grid h5{min-height:0}.benefit-grid{grid-template-columns:repeat(2,minmax(0,1fr))}}
 @media(max-width:760px){.platform-overview{padding-top:52px}.research-foundation{padding:18px}.research-source-box{padding:12px}.research-grid,.research-domains{grid-template-columns:repeat(2,minmax(0,1fr))}.research-metrics{grid-template-columns:repeat(2,minmax(0,1fr));gap:14px}.research-metrics>div:nth-child(2){border:0}.research-experience{gap:12px}.walkthrough{padding-top:44px}}
 @media(max-width:480px){.research-grid,.research-domains,.benefit-grid{grid-template-columns:1fr}.research-foundation{padding:14px}.research-grid article{padding:14px}.research-metrics>div{padding:8px}.research-metrics span{font-size:12px}.platform-cta .button{width:100%;text-align:center}.platform-capabilities{justify-content:flex-start}.benefit-chart{max-height:110px}}
+
+
+/* Launch pricing: clear plans, founding offer and comparison */
+.pricing-heading{grid-template-columns:1fr}
+.founding-launch{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.6fr);gap:28px;align-items:center;background:linear-gradient(120deg,#07342c,#03201b);color:#fff;border-radius:14px;padding:30px;margin-top:32px}
+.founding-copy{border-right:1px solid #446d5d;padding-right:26px}
+.founding-copy .eyebrow{color:#85efb7;margin-bottom:9px}
+.founding-copy h3{font:700 clamp(23px,2.3vw,35px)/1.15 Manrope,sans-serif;margin:0;color:#fff;letter-spacing:-.03em}
+.founding-discount{display:block;font:800 clamp(42px,5vw,72px)/1.1 Manrope,sans-serif;color:#65e3a3;margin:9px 0}
+.founding-copy>p:last-child{font-size:15px;line-height:1.55;margin:0;color:#e0f1e8}
+.founding-prices{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px;margin-bottom:14px}
+.founding-prices article{display:grid;gap:5px;background:#104235;border:1px solid #549b7b;border-radius:9px;padding:15px;min-width:0}
+.founding-prices h4{font:700 15px Manrope,sans-serif;margin:0}
+.founding-prices del{font-size:14px;color:#b4d3c4}
+.founding-prices strong{font:800 clamp(20px,2.2vw,31px)/1.15 Manrope,sans-serif;letter-spacing:-.035em}
+.founding-prices small{font-size:12px;color:#d0e5d9}
+.founding-details>.button{background:#087b4c;border-radius:7px}
+.founding-details>p{font-size:12px;line-height:1.5;text-align:center;color:#d0e5d9;margin:10px 0 0}
+.pricing-toggle-row{display:flex;justify-content:center;margin-top:24px}
+.pricing-toggle-row .billing-toggle{border-radius:28px;padding:4px;background:#fff;border-color:#a9cbbc}
+.pricing-toggle-row .billing-toggle button{border-radius:22px;min-height:42px;padding:8px 20px}
+.pricing-toggle-row .billing-toggle span{display:inline;margin-left:6px;color:#087b4c}
+.pricing-toggle-row .billing-toggle button[aria-pressed="true"]{background:#073c2c}
+.pricing-toggle-row .billing-toggle button[aria-pressed="true"] span{color:#85efb7}
+.pricing-commitment{text-align:center;color:var(--muted);font-size:13px;margin:9px 0 0}
+.pricing-tiers .price-card{border-radius:12px;border-color:#bed6c9}
+.pricing-tiers .price-card.featured{background:linear-gradient(145deg,#07332b,#041c19);border-color:#07332b;transform:none}
+.pricing-tiers .price-card.featured:hover{transform:translateY(-3px)}
+.pricing-tiers .price-card .ribbon{border-radius:0 11px 0 8px;background:#91e7bb}
+.pricing-tiers .price-card .button{border-radius:7px}
+.subscription-compare{margin-top:26px;padding:24px;background:#fff;border:1px solid #d1e2d8;border-radius:12px}
+.compare-heading{display:flex;align-items:baseline;justify-content:space-between;gap:12px;margin-bottom:16px;flex-wrap:wrap}
+.compare-heading h3,.startup-launch h3{font:700 clamp(21px,2.2vw,30px)/1.25 Manrope,sans-serif;letter-spacing:-.025em;margin:0}
+.compare-heading p{font-size:14px;color:var(--muted);margin:0}
+.compare-scroll{overflow-x:auto;border:1px solid #d5e4db;border-radius:9px}
+.compare-scroll table{border-collapse:collapse;width:100%;min-width:570px;font-size:14px}
+.compare-scroll th,.compare-scroll td{padding:9px 13px;border-bottom:1px solid #d5e4db;border-right:1px solid #d5e4db}
+.compare-scroll th:last-child,.compare-scroll td:last-child{border-right:0}
+.compare-scroll tbody tr:last-child>*{border-bottom:0}
+.compare-scroll thead th{background:#dceee3;color:#075d3a;font-weight:700;text-align:center}
+.compare-scroll th:first-child{text-align:left;width:38%}
+.compare-scroll tbody th{font-weight:500}
+.compare-scroll tbody td{text-align:center;width:20.666%}
+.compare-scroll tbody tr:nth-child(even){background:#f0f5f1}
+.included-check{color:#087b4c;font-weight:800;font-size:17px}
+.compare-note{text-align:center;color:var(--muted);font-size:12px;margin:12px 0 0;line-height:1.5}
+.pricing-extras{display:grid;grid-template-columns:minmax(0,1.2fr) minmax(0,1fr);gap:16px;margin-top:24px}
+.pricing-extras .seat-pricing,.startup-launch{margin:0;border:1px solid #cbded2;background:#fff;border-radius:12px;padding:22px}
+.pricing-extras .seat-pricing dl{grid-template-columns:1fr;margin-top:14px}
+.pricing-extras .seat-pricing dl>div{padding:8px 12px}
+.startup-launch .eyebrow{margin-bottom:8px}
+.startup-launch h3{color:#087b4c}
+.startup-launch p:not(.eyebrow){font-size:14px;line-height:1.55;color:var(--muted)}
+.startup-launch p strong{color:var(--ink)}
+.partner-pricing-note{border-radius:9px}
+@media(max-width:1050px){.founding-launch{grid-template-columns:1fr;gap:20px}.founding-copy{border-right:0;border-bottom:1px solid #446d5d;padding-right:0;padding-bottom:20px}.pricing-extras{grid-template-columns:1fr}}
+@media(max-width:600px){.founding-launch{padding:20px;gap:18px}.founding-prices{grid-template-columns:1fr;gap:8px}.founding-prices article{padding:12px}.founding-prices strong{font-size:26px}.subscription-compare{padding:14px}.compare-scroll th,.compare-scroll td{padding:8px 10px}.pricing-toggle-row .billing-toggle button{padding:8px 12px}.pricing-toggle-row .billing-toggle span{display:block;margin-left:0}.pricing-extras .seat-pricing,.startup-launch{padding:18px}}
