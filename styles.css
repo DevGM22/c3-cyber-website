@@ -345,3 +345,32 @@ body{background:#f5f6f1}
 .board-actions>p b{position:absolute;top:12px;left:0;color:var(--muted);font:600 9px Manrope,sans-serif}
 @media(max-width:1100px){.board-layout{grid-template-columns:1fr;gap:50px}.board-results{max-width:760px}.board-dashboard-grid,.board-dashboard-lower{grid-template-columns:1fr 1fr}}
 @media(max-width:600px){.board-dashboard-grid,.board-dashboard-lower{grid-template-columns:1fr}.board-priorities article>div b{font-size:11px}.board-priorities article>div small,.board-actions article small,.trend-labels{font-size:9px}}
+
+
+/* Marketing launch: compact hero and continuous improvement journey */
+.hero{min-height:540px;padding:48px max(6vw,calc((100vw - 1360px)/2)) 44px}
+.hero-copy{width:min(790px,59vw)}
+.hero .eyebrow{margin-bottom:20px;letter-spacing:.16em}
+.hero h1{font-size:clamp(48px,4.8vw,76px)}
+.hero-support{max-width:710px;font-size:clamp(16px,1.3vw,19px);line-height:1.5;margin:22px 0 0}
+.hero-support+.hero-support{margin-top:16px}
+.hero-actions{margin-top:28px;gap:20px}
+.hero .trust-line{margin-top:26px}
+.hero-caption{display:none}
+.csmm-intro{padding:48px max(6vw,calc((100vw - 1360px)/2));grid-template-columns:minmax(0,.8fr) minmax(0,1.2fr);gap:44px;align-items:center;background:linear-gradient(120deg,#051916,#03110f);color:#fff;border-top:1px solid #29433d;border-bottom:1px solid #29433d}
+.csmm-intro-copy .eyebrow{color:#45d98a;margin-bottom:12px}
+.csmm-intro-copy h2{font-size:clamp(29px,2.8vw,43px)}
+.csmm-intro-copy>p:not(.eyebrow){color:#d0dcd7;font-size:16px;line-height:1.55;margin:16px 0 0}
+.csmm-intro-copy .csmm-research{font-size:13px;color:#a9b8b3}
+.csmm-intro-copy .text-link{color:#45d98a;font-size:15px;margin-top:18px}
+.csmm-cycle{min-width:0}
+.csmm-journey{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:25px}
+.csmm-journey li,.csmm-journey li:last-child{position:relative;display:flex;flex-direction:column;align-items:center;justify-content:flex-start;text-align:center;gap:10px;min-height:166px;padding:18px 10px 14px;border:1px solid #23ba7d;border-radius:10px;background:linear-gradient(145deg,#0a3026,#061c18)}
+.csmm-journey li:not(:last-child):after{content:'→';position:absolute;right:-23px;top:50%;transform:translateY(-50%);color:#45d98a;font-size:23px;line-height:1}
+.csmm-journey svg{width:36px;height:36px;color:#45d98a;flex-shrink:0}
+.csmm-journey strong{font-size:17px}
+.csmm-journey p{color:#d0dcd7;font-size:13px;line-height:1.4;margin:0}
+.csmm-loop{margin:15px 10% 0;border:2px dotted #23ba7d;border-top:0;border-radius:0 0 16px 16px;text-align:center;padding:12px 4px 0}
+.csmm-loop span{display:inline-block;position:relative;top:12px;padding:8px 16px;background:#08251e;border:1px solid #23ba7d;border-radius:30px;font-size:13px;font-weight:600;color:#e2eee8}
+@media(max-width:1100px){.site-header nav{background:#061c18;color:#fff}.menu-toggle{color:#fff;border-color:#64736e}.hero-copy{width:min(710px,72vw)}.csmm-intro{grid-template-columns:1fr;gap:32px}.csmm-intro-copy{max-width:740px}}
+@media(max-width:600px){.hero{min-height:0;padding:55px 6vw 45px}.hero-copy{width:100%}.hero h1{font-size:clamp(36px,9vw,47px)}.hero .eyebrow{font-size:11px}.hero-support{font-size:16px}.hero-actions{gap:12px;margin-top:24px}.hero .button{min-width:0}.csmm-intro{padding:40px 6vw 52px}.csmm-journey{grid-template-columns:repeat(2,minmax(0,1fr));gap:14px}.csmm-journey li,.csmm-journey li:last-child{min-height:150px;padding:14px 8px}.csmm-journey li:not(:last-child):after{display:none}.csmm-loop{margin-left:4%;margin-right:4%}.csmm-loop span{font-size:12px;padding:7px 10px}}
